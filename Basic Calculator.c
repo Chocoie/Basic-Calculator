@@ -72,12 +72,12 @@ int main()
         scanf("%s", operation); //user input for operation type
         printf("--------------------------------------------------------------------\n");
 
-        if(!strcmp(operation, "exit"))
+        strlwr(operation); //converts word to all lowercase
+
+        if(strcmp(operation, "exit") == 0)
             printf("Thank you for using the Basic Calculator!\n");
         else
         {
-            strlwr(operation); //converts word to all lowercase
-
             //computes based on operation
             if(!strcmp(operation, "add"))
             {
